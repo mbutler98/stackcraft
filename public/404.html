@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stackcraft</title>
+    <script>
+      // Stackcraft is a single-page app using in-memory state plus URL hashes.
+      // Any unknown path on GitHub Pages redirects to the app root for this project site,
+      // preserving the hash (used for shared builds).
+      (function () {
+        var segments = window.location.pathname.split("/").filter(Boolean);
+        var root = segments.length > 0 ? "/" + segments[0] + "/" : "/";
+        window.location.replace(root + window.location.hash);
+      })();
+    </script>
+  </head>
+  <body style="background:#0c0c0e;color:#e7e5e4;font-family:system-ui,sans-serif">
+    <p>Redirecting to Stackcraft…</p>
+  </body>
+</html>
